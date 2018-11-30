@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "WeaponBase.h"
+#include "Engine/GameEngine.h"
 
 
 // Sets default values
@@ -32,7 +33,8 @@ void AWeaponBase::FireWeapon()
 	OnWeaponFired();
 }
 
-void AWeaponBase::AttachWeapon() 
-{
+void AWeaponBase::AttachWeapon() {
+	GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Weapon attached!"));
+
 
 }
