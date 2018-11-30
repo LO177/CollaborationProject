@@ -32,6 +32,7 @@ void AWeaponBase::FireWeapon()
 	OnWeaponFired();
 }
 
-void AWeaponBase::AttachWeapon() {
+void AWeaponBase::AttachWeapon() 
+{
 
 }

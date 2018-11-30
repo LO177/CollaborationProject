@@ -39,6 +39,6 @@ public:
 	UFUNCTION(BlueprintImplementableEvent)
 		void OnWeaponFired();
 
-	UFUNCTION(BlueprintImplementableEvent)
+	UFUNCTION(BlueprintCallable)
 		void AttachWeapon();
 };
