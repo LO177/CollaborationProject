@@ -33,12 +33,17 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	//int weaponType;
+
 	UFUNCTION(BlueprintCallable, Category = Firing)
 		void FireWeapon();
 
-	UFUNCTION(BlueprintImplementableEvent)
-		void OnWeaponFired();
+	/*UFUNCTION(BlueprintImplementableEvent)
+		void OnWeaponFired();*/
 
 	UFUNCTION(BlueprintCallable)
 		void AttachWeapon();
+
+	UPROPERTY(EditAnywhere)
+		TSubclassOf<class AProjectileBase> ProjectileType;
 };
