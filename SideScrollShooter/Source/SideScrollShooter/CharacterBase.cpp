@@ -5,14 +5,14 @@
 #include "WeaponBase.h"
 
 ACharacterBase::ACharacterBase() {
-
+	//charHealth = 100.0f;
 }
 
 void ACharacterBase::BeginPlay()
 {
 	Super::BeginPlay();
 
-	CurrentWeapon = GetWorld()->SpawnActor<AWeaponBase>(WeaponType,GetActorLocation(), GetActorRotation());
+	hasWeapon = false;
 }
 
 void ACharacterBase::Tick(float DeltaTime)
@@ -20,5 +20,18 @@ void ACharacterBase::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 	//FVector newWeaponLocation = GetActorLocation();
-	CurrentWeapon->SetActorLocation(GetActorLocation());
+	
+	if (hasWeapon) {
+		CurrentWeapon->SetActorLocation(GetActorLocation());
+	}
+}
+
+void ACharacterBase::AttachWeapon() {
+	hasWeapon = true;
+	weaponTypeAttach = "Rifle";
+
+	CurrentWeapon = GetWorld()->SpawnActor<AWeaponBase>(WeaponType, GetActorLocation(), GetActorRotation());
+
+	CurrentWeapon->weaponType = weaponTypeAttach;
+	
 }

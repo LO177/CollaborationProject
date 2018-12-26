@@ -17,7 +17,7 @@ public:
 	// Sets default values for this actor's properties
 	AWeaponBase();
 
-	FString WeaponType;
+	FString weaponType;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = Weapon)
 		int ammoAttribute;
