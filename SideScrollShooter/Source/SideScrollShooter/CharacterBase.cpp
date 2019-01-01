@@ -12,7 +12,16 @@ void ACharacterBase::BeginPlay()
 {
 	Super::BeginPlay();
 
+	directionChar = "Right";
+
 	hasWeapon = false;
+
+	/*hasWeapon = true;
+
+	weaponTypeAttach = "Rifle";
+	CurrentWeapon = GetWorld()->SpawnActor<AWeaponBase>(WeaponType, GetActorLocation(), GetActorRotation());
+	CurrentWeapon->weaponType = weaponTypeAttach;
+	CurrentWeapon->directionWeap = directionChar;*/
 }
 
 void ACharacterBase::Tick(float DeltaTime)
@@ -26,12 +35,11 @@ void ACharacterBase::Tick(float DeltaTime)
 	}
 }
 
-void ACharacterBase::AttachWeapon() {
+void ACharacterBase::AttachWeapon(FString weaponTypeAttach) {
 	hasWeapon = true;
-	weaponTypeAttach = "Rifle";
 
 	CurrentWeapon = GetWorld()->SpawnActor<AWeaponBase>(WeaponType, GetActorLocation(), GetActorRotation());
 
 	CurrentWeapon->weaponType = weaponTypeAttach;
-	
+	CurrentWeapon->directionWeap = directionChar;
 }

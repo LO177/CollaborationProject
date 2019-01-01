@@ -15,8 +15,11 @@ AProjectileBase::AProjectileBase()
 void AProjectileBase::BeginPlay()
 {
 	Super::BeginPlay();
-	
-	
+
+	//speedProj = 20.0f;
+	//damageProj = 10;
+
+	casterDirection = "Right";
 }
 
 // Called every frame
@@ -24,8 +27,19 @@ void AProjectileBase::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	direction->SetActorRotation(GetActorRotation());
+	/*direction->SetActorRotation(GetActorRotation());
 
-	
+	if (casterDirection == "Right") {
+		MovDirection = 90.0f;
+		this->SetActorLocation(GetActorLocation() + speedProj);
+	}
+	else if (casterDirection == "Left") {
+		MovDirection = -90.0f;
+		this->SetActorLocation(GetActorLocation() - speedProj);
+	}*/
 }
 
+void AProjectileBase::FiringSetup(FString directionFace)
+{
+	
+}

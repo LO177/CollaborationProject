@@ -4,7 +4,6 @@
 #include "Engine/GameEngine.h"
 #include "ProjectileBase.h"
 
-
 // Sets default values
 AWeaponBase::AWeaponBase()
 {

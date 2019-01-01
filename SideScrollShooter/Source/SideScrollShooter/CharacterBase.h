@@ -26,7 +26,7 @@ class SIDESCROLLSHOOTER_API ACharacterBase : public APaperCharacter
 	AWeaponBase* CurrentWeapon;
 
 	UFUNCTION(BlueprintCallable)
-		void AttachWeapon();
+		void AttachWeapon(FString weaponTypeAttach);
 	
 	bool hasWeapon = false;
 	FString weaponTypeAttach;
@@ -35,4 +35,7 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, Category = Health)
 		float charHealth = 100.0f;
+
+	UPROPERTY(BlueprintReadWrite, Category = Movement)
+		FString directionChar;
 };

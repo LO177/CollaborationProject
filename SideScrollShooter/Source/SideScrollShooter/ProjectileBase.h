@@ -30,4 +30,19 @@ public:
 	};
 
 	FVector location = new projectileLocation;*/
+
+	
+	float MovDirection;
+
+	UPROPERTY(BlueprintReadWrite, Category = Firing)
+		float speedProj;
+
+	UPROPERTY(BlueprintReadWrite, Category = Firing)
+		int damageProj;
+
+	UPROPERTY(BlueprintReadWrite, Category = Firing)
+		FString casterDirection;
+
+	UFUNCTION(BlueprintCallable, Category = Firing)
+		void FiringSetup(FString directionFace);
 };

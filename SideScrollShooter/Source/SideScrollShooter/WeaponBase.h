@@ -19,6 +19,9 @@ public:
 
 	FString weaponType;
 
+	UPROPERTY(BlueprintReadWrite, Category = Movement)
+		FString directionWeap;
+
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = Weapon)
 		int ammoAttribute;
 
@@ -46,4 +49,6 @@ public:
 
 	UPROPERTY(EditAnywhere)
 		TSubclassOf<class AProjectileBase> ProjectileType;
+
+	float fireDelay;
 };
