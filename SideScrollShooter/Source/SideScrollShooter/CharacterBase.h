@@ -38,4 +38,7 @@ public:
 
 	UPROPERTY(BlueprintReadWrite, Category = Movement)
 		FString directionChar;
+
+	UFUNCTION(BlueprintCallable, Category = Movement)
+		void UpdateFireDirection();
 };

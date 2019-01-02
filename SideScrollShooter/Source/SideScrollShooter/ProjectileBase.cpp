@@ -39,7 +39,6 @@ void AProjectileBase::Tick(float DeltaTime)
 	}*/
 }
 
-void AProjectileBase::FiringSetup(FString directionFace)
+void AProjectileBase::FiringSetup_Implementation(const FString& directionFace)
 {
-	
 }

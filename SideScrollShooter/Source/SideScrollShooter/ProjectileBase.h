@@ -43,6 +43,6 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category = Firing)
 		FString casterDirection;
 
-	UFUNCTION(BlueprintCallable, Category = Firing)
-		void FiringSetup(FString directionFace);
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = Firing)
+		void FiringSetup(const FString& directionFace);
 };

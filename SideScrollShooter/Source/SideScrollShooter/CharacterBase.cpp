@@ -43,3 +43,9 @@ void ACharacterBase::AttachWeapon(FString weaponTypeAttach) {
 	CurrentWeapon->weaponType = weaponTypeAttach;
 	CurrentWeapon->directionWeap = directionChar;
 }
+
+void ACharacterBase::UpdateFireDirection() {
+	if (CurrentWeapon != NULL) {
+		CurrentWeapon->directionWeap = directionChar;
+	}
+}
