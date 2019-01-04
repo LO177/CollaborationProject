@@ -25,6 +25,9 @@ public:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = Weapon)
 		int ammoAttribute;
 
+	UFUNCTION(BluePrintImplementableEvent, Category = "Pickup")
+		void OnActivate(AActor* pickedUpBy);
+
 	AActor* playerPointer = NULL;
 
 

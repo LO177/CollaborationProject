@@ -5,7 +5,7 @@
 #include "WeaponBase.h"
 
 ACharacterBase::ACharacterBase() {
-	//charHealth = 100.0f;
+	charHealth = 100.0f;
 }
 
 void ACharacterBase::BeginPlay()

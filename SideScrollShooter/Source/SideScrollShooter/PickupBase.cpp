@@ -12,7 +12,7 @@ APickupBase::APickupBase()
 
 	MeshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeshComp"));
 	SphereComp = CreateDefaultSubobject<USphereComponent>(TEXT("SphereComp"));
-
+	RootComponent = SphereComp;
 }
 
 void APickupBase::NotifyActorBeginOverlap(AActor * OtherActor)
