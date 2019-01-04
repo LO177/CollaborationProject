@@ -22,6 +22,9 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category = Movement)
 		FString directionWeap;
 
+	UPROPERTY(BlueprintReadWrite, Category = Firing)
+		int directProj;
+
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = Weapon)
 		int ammoAttribute;
 

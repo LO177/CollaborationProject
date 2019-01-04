@@ -35,6 +35,9 @@ public:
 	float MovDirection;
 
 	UPROPERTY(BlueprintReadWrite, Category = Firing)
+		float directionProjSpecific;
+
+	UPROPERTY(BlueprintReadWrite, Category = Firing)
 		float speedProj;
 
 	UPROPERTY(BlueprintReadWrite, Category = Firing)
@@ -43,6 +46,9 @@ public:
 	UPROPERTY(BlueprintReadWrite, Category = Firing)
 		FString casterDirection;
 
+	UPROPERTY(BlueprintReadWrite, Category = Firing)
+		int casterSetDirection;
+
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = Firing)
-		void FiringSetup(const FString& directionFace);
+		void FiringSetup(const FString& directionFace, const int& directionAngle);
 };
